@@ -7,36 +7,23 @@ npm i -D @dbetka/js-plugin-template
 ```
 
 ## Building
+Build js bundle from `src/index.js`.
 ```
-npm run build            Build js bundle from js and vue files.
+npm run build            
 ```
 
-## Usage outside of plugin
+## Usage plugin outside
 
 #### Full Bundle
 ```js
-import VueAtomic from '@dbetka/vue-plugin-template'
-import '@dbetka/vue-plugin-template/dist/index.css'
+import plugin from '@dbetka/js-plugin-template'
 
-Vue.use(VueAtomic)
+plugin.logText('text') // print 'text' in console 
 ```
 
-### Individual components
-with default name
+### Individual methods
 ```js
-import { OwnButton } from '@dbetka/vue-plugin-template'
-import '@dbetka/vue-plugin-template/dist/own-button.css'
+import { logText } from '@dbetka/js-plugin-template'
 
-Vue.component(OwnButton.name, OwnButton) // component name is m-input
+logText('text') // print 'text' in console 
 ```
-with own name
-```js
-import { OwnButton } from '@dbetka/vue-plugin-template'
-import '@dbetka/vue-plugin-template/dist/own-button.css'
-
-Vue.component('new-button', OwnButton) // component name is new-input
-```
-
-## Project maintenance 
-
-Scripts used in `package.json` has own docs [here](scripts/README.md)
