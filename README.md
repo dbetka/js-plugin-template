@@ -3,7 +3,7 @@ Template for js plugin project.
 
 ## Installation
 ```
-npm i -D @dbetka/js-plugin-template
+npm i
 ```
 
 ## Building
@@ -16,14 +16,14 @@ npm run build
 
 #### Full Bundle
 ```js
-import plugin from '@dbetka/js-plugin-template'
+import plugin from 'js-plugin-template/dist/index.js'
 
 plugin.logText('text') // print 'text' in console 
 ```
 
 ### Individual methods
 ```js
-import { logText } from '@dbetka/js-plugin-template'
+import { logText } from 'js-plugin-template/dist/index.js'
 
 logText('text') // print 'text' in console 
 ```
